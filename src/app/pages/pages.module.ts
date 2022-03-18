@@ -10,6 +10,8 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 import { SettingComponent } from './setting/setting.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { SettingComponent } from './setting/setting.component';
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
-    SettingComponent
+    SettingComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +37,8 @@ import { SettingComponent } from './setting/setting.component';
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
-    SettingComponent
+    SettingComponent,
+    PromesasComponent
   ]
 })
 export class PagesModule { }

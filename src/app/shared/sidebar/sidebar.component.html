@@ -1,11 +1,11 @@
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-<aside class="left-sidebar animated fadeIn fast">
+<aside class="left-sidebar">
     <!-- Sidebar scroll-->
-    <div class="scroll-sidebar animated fadeIn fast">
+    <div class="scroll-sidebar ">
         <!-- Sidebar navigation-->
-        <nav class="sidebar-nav animated fadeIn fast">
+        <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="user-profile">
                     <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="./assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs </span></a>
@@ -26,7 +26,7 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li *ngFor="let subMenuItem of item.submenu">
-                            <a [routerLink]="subMenuItem.url">{{subMenuItem.titulo}} </a></li>
+                            <a [routerLink]="subMenuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{subMenuItem.titulo}} </a></li>
 
                     </ul>
                 </li>
