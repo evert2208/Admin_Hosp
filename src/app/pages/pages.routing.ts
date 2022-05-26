@@ -8,6 +8,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { SettingComponent } from './setting/setting.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
     {path: 'grafica1', component: Grafica1Component, data: {titulo: 'Graficas'}},
     {path: 'settings', component: SettingComponent, data: {titulo: 'Ajustes'}},
     {path: 'promesas', component: PromesasComponent, data: {titulo: 'Promesas'}},
-    {path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}}
+    {path: 'rxjs', component: RxjsComponent, data: {titulo: 'Rxjs'}},
+    {path: 'perfil', component: PerfilComponent, data: {titulo: 'Perfil'}}
 
   ]
   },
