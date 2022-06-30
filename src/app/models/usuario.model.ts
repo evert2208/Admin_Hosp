@@ -10,14 +10,17 @@ export class Usuario {
     public google?: boolean,
     public img?: string,
     public role?: string,
-    public uid?: String
+    public uid?: String | any
   ){}
 
   get imagenUrl() {
 
+    if (!this.img) {
+      return `${base_url}/upload/usuarios/no-image`;
+    } else
     if (this.img?.includes('https')) {
       return this.img;
-    }
+    }else
 
     if (this.img) {
       return `${base_url}/upload/usuarios/${this.img}`;

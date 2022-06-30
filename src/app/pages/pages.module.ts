@@ -13,6 +13,7 @@ import { SettingComponent } from './setting/setting.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { UsuariosComponent } from './mantenimiento/usuarios/usuarios.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     SettingComponent,
     PromesasComponent,
     RxjsComponent,
-    PerfilComponent
+    PerfilComponent,
+    UsuariosComponent
   ],
   imports: [
     CommonModule,
