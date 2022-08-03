@@ -8,6 +8,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 
 import { PagesModule } from './pages/pages.module';
+import { PipesModule } from './pipes/pipes.module';
+
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { PagesModule } from './pages/pages.module';
     NotfoundComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    AuthModule
+    AuthModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

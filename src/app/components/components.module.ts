@@ -10,7 +10,8 @@ import { ModalImgComponent } from './modal-img/modal-img.component';
   declarations: [
     IncrementadorComponent,
     DonaComponent,
-    ModalImgComponent
+    ModalImgComponent,
+
   ],
   imports: [
     CommonModule,

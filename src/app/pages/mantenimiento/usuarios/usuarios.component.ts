@@ -17,7 +17,7 @@ export class UsuariosComponent implements OnInit, OnDestroy {
 
   public imgSubs: Subscription | any;
   public totalUsuarios: number = 0;
-  public usuarios: Usuario[]=[];
+  public usuarios: any | Usuario[]=[];
   public usuariosTemp: Usuario[]=[];
   public desde: number = 0;
   public cargando: boolean= true;

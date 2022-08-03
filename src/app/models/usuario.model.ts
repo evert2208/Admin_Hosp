@@ -8,8 +8,8 @@ export class Usuario {
     public email: string,
     public password?: string,
     public google?: boolean,
-    public img?: string,
-    public role?: string,
+    public img?: string|any,
+    public role?:'ADMIN_ROLE' | 'USER_ROLE',
     public uid?: String | any
   ){}
 
