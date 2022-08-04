@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 
 
 const base_url= environment.base_url;
-declare const gapi:any;
+declare const google:any;
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class UsuarioService {
   constructor(private http: HttpClient,
               private router: Router,
               private ngZone: NgZone) {
-                this.googleInit();
+                //this.googleInit();
               }
 
     get token(){
@@ -57,8 +57,8 @@ export class UsuarioService {
 
       return new Promise<void>(resolve => {
 
-        gapi.load('auth2', () =>{
-          this.auth2 = gapi.auth2.init({
+        google.load('auth2', () =>{
+          this.auth2 = google.auth2.init({
             client_id: '528107972060-56320ejf6jl32r49abdidcitlqnsgf1r.apps.googleusercontent.com',
             cookiepolicy: 'single_host_origin',
 
@@ -74,12 +74,14 @@ export class UsuarioService {
     localStorage.removeItem('token');
     localStorage.removeItem('menu');
 
-    localStorage.removeItem('token');
-    this.auth2.signOut().then( ()=> {
-      this.ngZone.run(()=>{
-        this.router.navigateByUrl('/login');
-      })
-    });
+    this.ngZone.run(()=>{
+      this.router.navigateByUrl('/login');
+    })
+
+    //google.accounts.id.disableAutoSelect()
+
+
+
   }
 
   validartoken(): Observable<boolean> {
@@ -126,7 +128,7 @@ export class UsuarioService {
             );
   }
 
-  loginGoogle(token:any) {
+  loginGoogle(token:string) {
 
     return this.http.post(`${base_url}/login/google`, {token})
             .pipe(
